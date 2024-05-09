@@ -1,6 +1,7 @@
 "use client";
 
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { BackButton } from "./back-button";
 import { Header } from "./header";
 import { Social } from "./social";
 
@@ -24,6 +25,12 @@ export const CardWrapper = ({ backButtonHref, backButtonLabel, children, headerL
           <Social />
         </CardFooter>
       )}
+      <CardFooter>
+        <BackButton
+          label={backButtonLabel}
+          href={backButtonHref}
+        />
+      </CardFooter>
     </Card>
   );
 };
